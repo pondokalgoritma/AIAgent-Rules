@@ -14,7 +14,9 @@
    - **Secret Protection:** DILARANG (FORBIDDEN) to commit raw secrets to `wrangler.jsonc`. Secrets must be managed via Cloudflare Dashboard or `wrangler secret put`.
 
 4. DATABASE (D1) & PERSISTENCE:
-   - **Migration First:** All schema changes MUST be implemented via `npx wrangler d1 migrations create <name>`. Manual table creation in code is FORBIDDEN.
+   - **Migration & Reset Policy:**
+     - **Development:** STRICTLY FORBIDDEN to use `ALTER` commands in migrations during the development phase. Schema changes must be implemented by updating the initial schema/migration and performing a database **RESET**.
+     - **User Confirmation:** Always ask the user to run the reset/seed command (e.g., `npx wrangler d1 execute ...`) after modifying the schema in the code.
    - **Batching:** Use D1's `.batch()` method for multiple SQL operations to minimize round-trips and optimize performance.
    - **KV Usage:** Use KV for read-heavy, low-latency data that doesn't require ACID transactions. Implement TTL (Time To Live) where appropriate to save storage.
 

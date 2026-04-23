@@ -30,3 +30,8 @@
 
 6. FINAL VERIFICATION:
    - Provide a brief explanation regarding: efficiency reasons, trade-offs made, and risks avoided.
+
+7. DEVELOPMENT SCHEMA MANAGEMENT:
+   - **NO ALTER DURING DEVELOPMENT:** To maintain a clean and deterministic schema, using `ALTER TABLE` during the development phase is STRICTLY FORBIDDEN.
+   - **RESET-FIRST APPROACH:** If the database structure needs to change, the existing database must be **RESET** (Dropped and Recreated) with the new schema.
+   - **USER CONFIRMATION:** AI Agents MUST NOT perform a database reset automatically. Always ask the user to execute the reset/seed command (e.g., `npm run db:reset`) after a schema change is implemented in the source code.

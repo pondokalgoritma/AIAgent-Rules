@@ -66,7 +66,9 @@
 13. PREMIUM FINISHING TOUCHES:
    - **Empty States:** Every data list or search result MUST have a polished "Empty State" UI. STRICTLY FORBIDDEN to leave a blank white screen; use subtle illustrations, icons, and clear call-to-action (CTA) text.
    - **Interactive Feedback:** Any button or interactive element that triggers an asynchronous action MUST show a clear loading/busy state (e.g., replace icon with spinner, disable with visual feedback) to provide immediate user acknowledgment.
-   - **Custom Scrollbars:** Implement sleek, theme-aware custom scrollbar styling for all scrollable containers to ensure a consistent premium aesthetic across different browsers and operating systems.
+   - **Custom Scrollbars:** Implement sleek, theme-aware custom scrollbar styling for all scrollable containers.
+   - **Seamless Integration:** Scrollbars MUST be unified with the container borders (zero gap/padding). Even in resizable components, the scrollbar must remain flush with the edge to ensure a single, cohesive, and seamless aesthetic.
+
    - **Professional Branding:** Every project MUST include a custom Favicon and full Social Media (OpenGraph/SEO) metadata to ensure a professional appearance when shared.
 
 

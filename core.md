@@ -17,7 +17,8 @@
 4. SELF-VERIFICATION (THE FINAL CHECK):
    - Before declaring a task "DONE," the AI MUST perform a critical self-review of the code.
    - **Mandatory Checks:** Scan for typos, verify logic against edge cases, check for linting errors, and confirm that ALL user requirements have been fully addressed.
-   - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands to ensure no regressions or syntax errors were introduced during the process.
+   - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands. Additionally, perform a **Manual Log Audit** to ensure no raw `console.log` statements remain in production-ready files.
+
 
 5. NO PLACEHOLDERS & COMPLETION SUMMARY:
    - **Fully Functional:** STRICTLY FORBIDDEN to use placeholders, `// TODO` comments, or incomplete logic. Every line of code must be fully functional and integrated.

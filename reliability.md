@@ -20,8 +20,10 @@
    - Validate conditions at the beginning of functions and `return` errors immediately if invalid (reduces deep nesting).
 
 5. LOGGING:
-   - Log errors with sufficient context to aid debugging.
-   - NEVER log sensitive data (PII, passwords, credentials).
+   - **Environment-Aware Logging:** Debug logs (e.g., `console.log`) MUST be wrapped in environment checks (e.g., `if (process.env.NODE_ENV === 'development')`) to prevent unnecessary output in production.
+   - **Production Hygiene:** STRICTLY FORBIDDEN to leave raw `console.log` statements in production-bound code. Only structured, necessary system logs are allowed in production.
+   - **No Sensitive Data:** NEVER log sensitive data (PII, passwords, credentials).
+
 
 6. EXECUTION & REAL-TIME MONITORING:
    - **Non-Blocking Logic:** Long-running or heavy computational tasks MUST NOT freeze the main thread (UI). Use multi-threading, Web Workers (frontend), or Background Jobs (backend/desktop) to ensure responsiveness.

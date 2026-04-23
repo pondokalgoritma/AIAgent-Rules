@@ -24,3 +24,7 @@
 6. VERSION CONTROL & COMMITS:
    - If executing git commits, STRICTLY adhere to Conventional Commits standards (e.g., `feat:`, `fix:`, `chore:`, `refactor:`, `docs:`).
    - Commit messages must be concise, written in English, and clearly explain the *what* and *why* of the change.
+
+7. ROBUST CODING HABITS:
+   - **Immutability First:** Avoid mutating objects or arrays directly. Always prefer returning new copies (e.g., using spread operators `{...obj}` or map/filter) to ensure predictable state management.
+   - **No Magic Numbers/Strings:** DILARANG (FORBIDDEN) to use raw, unexplained numbers or strings in logic (e.g., `if (status === 3)`). Use descriptive constants or enums (e.g., `if (status === Status.PUBLISHED)`).

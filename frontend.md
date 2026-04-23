@@ -33,3 +33,7 @@
    - MANDATORY use of professional, high-quality icon libraries (e.g., **Lucide React**, **Heroicons**, or **Radix Icons**).
    - STRICTLY FORBIDDEN to use low-quality raster images (PNG/JPG) for UI icons; icons MUST be SVG-based for infinite scalability and crispness.
    - Consistency: Ensure all icons used within the same application follow a uniform stroke weight, style (e.g., all outlined or all filled), and sizing pattern.
+
+8. USER FEEDBACK & LAYERING:
+   - **Loading & Empty States:** Every data-fetching component MUST handle and display a distinct "Loading" state and an "Empty" state (when no data is returned). DILARANG (FORBIDDEN) to show blank screens during background processes.
+   - **Z-Index Management:** Avoid "Z-Index Wars" (e.g., `z-[9999]`). Use a structured layering system or Tailwind's standard z-index scale.

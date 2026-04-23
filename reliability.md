@@ -27,3 +27,7 @@
    - **Non-Blocking Logic:** Long-running or heavy computational tasks MUST NOT freeze the main thread (UI). Use multi-threading, Web Workers (frontend), or Background Jobs (backend/desktop) to ensure responsiveness.
    - **Real-time Logging:** Implementation must support "Instant Feedback." Logs must be emitted immediately as a process starts, progresses, or completes.
    - **Log Depth:** Real-time logs must include critical context: Timestamp, Process ID/Name, Status (Started/Progress/Done), and relevant metrics (e.g., memory usage or item count) to aid debugging.
+
+7. RESOURCE CLEANUP & EDGE CASES:
+   - **Mandatory Cleanup:** Any allocated resource (subscriptions, intervals, timeouts, file handles, DB connections) MUST be explicitly closed or cleared when no longer needed to prevent memory leaks.
+   - **Defensive Programming:** Never assume the "Happy Path." Always handle null/undefined values, empty arrays, and network timeouts. Implement retry logic for critical transient failures.

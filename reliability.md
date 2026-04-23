@@ -25,6 +25,7 @@
    - **Environment-Aware Logging:** Debug logs (e.g., `console.log`) MUST be wrapped in environment checks (e.g., `if (process.env.NODE_ENV === 'development')`) to prevent unnecessary output in production.
    - **Production Hygiene:** STRICTLY FORBIDDEN to leave raw `console.log` statements in production-bound code. Only structured, necessary system logs are allowed in production.
    - **No Sensitive Data:** NEVER log sensitive data (PII, passwords, credentials).
+   - **Explicit Logging:** STRICTLY FORBIDDEN to log entire objects (e.g., `console.log(user)`). Only log specific, necessary keys (e.g., `user.id`, `user.name`) to prevent accidental data leaks.
 
 
 6. EXECUTION & REAL-TIME MONITORING:
@@ -50,4 +51,3 @@
 10. GRACEFUL SHUTDOWN:
    - **Signal Handling:** Applications MUST handle termination signals (e.g., `SIGTERM`, `SIGINT`). 
    - **Cleanup Logic:** Upon receiving a shutdown signal, the application MUST gracefully close database connections, finish pending requests, and release resources to prevent data corruption and ensure a clean exit.
-

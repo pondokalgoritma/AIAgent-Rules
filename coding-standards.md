@@ -37,6 +37,7 @@
    - **Security Audit:** Before installation, ensure the library is well-maintained and has no known critical vulnerabilities.
    - **Explicit Versioning:** When adding dependencies, use **Exact Version Numbers** (e.g., `1.2.3`) instead of ranges (e.g., `^1.2.3` or `~1.2.3`) to prevent unexpected breaking changes during future installs.
    - **No Redundancy:** STRICTLY FORBIDDEN to install new libraries that overlap in functionality with existing ones. Always audit `package.json` first and utilize existing project tools before suggesting new dependencies.
+   - **KISS Principle (No Over-Dependency):** STRICTLY FORBIDDEN to install heavy libraries for simple tasks that can be implemented natively with less than 20 lines of code (e.g., using `lodash` only for a simple object map).
 
 9. IMPORT EFFICIENCY (TREE-SHAKING):
    - **Modular Imports:** Favor importing specific functions or components (e.g., `import { map } from 'lodash'`) instead of entire libraries (e.g., `import _ from 'lodash'`) to enable effective tree-shaking and minimize production bundle size.

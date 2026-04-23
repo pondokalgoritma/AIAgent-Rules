@@ -1,26 +1,25 @@
-# CORE & EFFICIENCY RULES (ALWAYS ACTIVE)
+# CORE OPERATIONAL RULES (ALWAYS ACTIVE)
 
-1. FOCUS & NO ASSUMPTIONS:
-   - Focus exclusively on the user's request. Do not expand the scope, take unsolicited initiatives, or add unauthorized features.
-   - If instructions are ambiguous or information is missing, DO NOT ASSUME. Clarify/ask the user before executing.
+1. NO DUPLICATION:
+   - Always check the existing codebase before creating new functions or components. Use `grep` or `find` to locate similar logic.
+   - Reuse existing utilities and constants. Redundant implementations are STRICTLY FORBIDDEN.
 
-2. EFFICIENCY & INCREMENTAL EXECUTION:
-   - Avoid reading entire large files unless necessary. Read only specific, relevant functions or sections.
-   - Minimize terminal commands, redundant file reads, and unnecessary log outputs to save tokens.
-   - Work incrementally (step-by-step starting from the smallest, simplest part) rather than attempting a brute-force system overhaul.
+2. ATOMICITY & MODULARITY:
+   - Each file should serve ONE clear purpose.
+   - Functions must be small, testable, and follow the *Single Responsibility Principle (SRP)*.
 
-3. BOY SCOUT RULE & NON-DESTRUCTIVE EDITS:
-   - Always leave the code cleaner than you found it. 
-   - **Non-Destructive:** Always prioritize appending or extending logic over rewriting or deleting existing code. Proactively ensure that existing functionalities are preserved unless explicitly asked to refactor or remove them.
+3. CONTINUOUS REFACTORING:
+   - Leave the code cleaner than you found it. 
    - **Refactor proactively:** Small improvements (e.g., better naming, removing dead code) should be made during every task, but MUST NOT break existing logic.
 
 4. SELF-VERIFICATION & AUTO-MAINTENANCE:
    - Before declaring a task "DONE," the AI MUST perform a critical self-review of the code.
    - **Mandatory Checks:** Scan for typos, verify logic against edge cases, check for linting errors, and confirm that ALL user requirements have been fully addressed.
    - **Feature Preservation Audit:** AI MUST audit all previously "completed" features in **`PROJECT.md`** to ensure they remain fully functional. STRICTLY FORBIDDEN to let new features break old ones.
-   - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands. Additionally, perform a **Manual Log Audit** to ensure no raw `console.log` statements remain in production-ready files.
+   - **Build & Lint Validation:** Before declaring a major feature "SHIP-READY," the AI MUST perform a local production build check (e.g., `npm run build` or `npm run lint`) to catch environment or type-safety issues that don't appear in dev mode.
+   - **Manual Log Audit:** Ensure no raw `console.log` statements remain in production-ready files.
    - **Documentation Sync:** AI MUST automatically update **`PROJECT.md`** (roadmap), **`ARCHITECTURE.md`** (tech map), domain **`README.md`**, and **API specifications** (e.g., `API.md` or Swagger) before finishing.
-
+   - **Link Integrity Audit:** Whenever a route, file name, or directory structure changes, the AI MUST verify and update all internal links (Sidebar, Navigation, Redirects) to prevent 404 errors.
 
 5. NO PLACEHOLDERS & COMMIT STANDARDS:
    - **Fully Functional:** STRICTLY FORBIDDEN to use placeholders, `// TODO` comments, or incomplete logic. Every line of code must be fully functional and integrated.
@@ -30,6 +29,9 @@
      - **What Changed:** A clear list of modifications and new files.
      - **Why:** Brief rationale for the implementation strategy.
      - **How to Test:** Specific steps for the user to verify the changes work as intended.
+     - **Action Required:** Explicitly notify the user if they need to run `npm install`, apply new migrations, or update their local `.env` file.
+
+   - **Folder Persistence (.gitkeep):** AI MUST add a `.gitkeep` file to any newly created empty directory that is part of the required project architecture to ensure folder structures are preserved in Version Control.
 
 6. PROJECT CONTEXT & NAVIGATION WORKFLOW:
    - **Mandatory Files:** Every project MUST have standardized **`README.md`** (Public Setup), **`PROJECT.md`** (Roadmap), **`ARCHITECTURE.md`** (Technical Map), **`TROUBLESHOOTING.md`** (Error Log), and **`.gitignore`** files in the root.
@@ -53,3 +55,9 @@
    - **Learning Capture:** Every time a non-trivial build error, environment issue, or complex bug is solved, the AI MUST record the **Symptom**, **Root Cause**, and **Solution** in the project's `TROUBLESHOOTING.md`.
    - **Global Knowledge Sync:** If a fix is general and applicable to other projects, the AI MUST suggest adding it to a centralized knowledge base or the global ruleset's `/knowledge` directory.
    - **Pre-flight Knowledge Check:** Before starting any new task or resolving an error, the AI MUST check for relevant patterns in the local `TROUBLESHOOTING.md` and global knowledge to avoid repeating past mistakes and ensure the most efficient solution is used.
+
+9. DEVELOPER EXPERIENCE & CLARITY (DX):
+   - **Rationale Headers:** Every major logic file or complex utility MUST include a brief header or JSDoc explaining the **Architecture Decision** or rationale for unconventional patterns used.
+   - **Legacy-to-New Mapping:** During refactoring, the AI MUST provide a clear mapping in the task summary of what has been moved, renamed, or replaced to ensure the developer doesn't lose context.
+   - **Config Visibility:** Any modification to critical configuration files (e.g., `tsconfig.json`, `package.json`, `tauri.conf.json`) MUST be explicitly highlighted in the handover summary.
+   - **No "Magic" Without Disclosure:** If the AI utilizes complex or non-obvious framework features (e.g., obscure hooks, native bindings, or custom compilers), it MUST provide a brief "Developer Note" explaining how it works.

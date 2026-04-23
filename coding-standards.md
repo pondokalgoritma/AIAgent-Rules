@@ -41,4 +41,12 @@
 9. IMPORT EFFICIENCY (TREE-SHAKING):
    - **Modular Imports:** Favor importing specific functions or components (e.g., `import { map } from 'lodash'`) instead of entire libraries (e.g., `import _ from 'lodash'`) to enable effective tree-shaking and minimize production bundle size.
 
+10. CONSISTENT FILE NAMING:
+
+
+   - **Kebab-Case:** All filenames (components, utilities, assets, styles) MUST use **kebab-case** (e.g., `user-profile-card.tsx`). This ensures seamless compatibility across case-sensitive (Linux) and case-insensitive (macOS/Windows) filesystems.
+
+11. MEANINGFUL DOCUMENTATION:
+   - **TSDoc/JSDoc:** Every exported function, class, interface, or complex logic block MUST include **TSDoc/JSDoc** comments clearly explaining the purpose, parameters, and return values to ensure long-term maintainability.
+
 

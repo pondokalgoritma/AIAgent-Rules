@@ -44,6 +44,8 @@
    - **Standard Success Format:** `{ "success": true, "data": Object|Array, "message": string }`.
    - **Standard Error Format:** `{ "success": false, "error": { "code": string, "message": string, "details": any } }`.
    - **Consistent HTTP Status Codes:** Use appropriate status codes: 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), 500 (Internal Error).
+   - **Mandatory API Pagination:** Any API endpoint that returns a collection of data MUST implement pagination (Limit/Offset or Cursor-based). STRICTLY FORBIDDEN to return unbounded lists to prevent performance degradation and memory issues.
+
 
 9. CONSISTENT STATE MANAGEMENT:
    - **Pattern Uniformity:** Use a single, unified state management pattern across the application (e.g., **Zustand** for global state, **Signals** or **Context** for UI-specific state). STRICTLY FORBIDDEN to mix multiple competing state libraries.

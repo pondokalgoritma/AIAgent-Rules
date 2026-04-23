@@ -43,3 +43,8 @@
    - **Timezone Consistency:** All timestamps MUST be stored and processed in **UTC (ISO 8601)**. Conversion to local timezones should ONLY happen at the Presentation Layer (UI) for display purposes.
    - **Streaming for Large Data:** STRICTLY FORBIDDEN to read entire large files or datasets into memory. Use **Streams** (ReadableStream/WritableStream) for processing to keep memory usage constant and prevent OOM (Out of Memory) crashes.
    - **Rate Limit Handling:** When calling external APIs, implement **Exponential Backoff** and retry mechanisms to gracefully handle `429 Too Many Requests` or transient network errors.
+
+10. GRACEFUL SHUTDOWN:
+   - **Signal Handling:** Applications MUST handle termination signals (e.g., `SIGTERM`, `SIGINT`). 
+   - **Cleanup Logic:** Upon receiving a shutdown signal, the application MUST gracefully close database connections, finish pending requests, and release resources to prevent data corruption and ensure a clean exit.
+

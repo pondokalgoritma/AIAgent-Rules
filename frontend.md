@@ -29,6 +29,7 @@
 
 6. DUAL THEME SUPPORT (DARK/LIGHT):
    - **Theme-Aware Components:** EVERY custom component MUST be fully responsive to theme changes.
+   - **Modular Theme Configuration:** All theme-related settings (color palettes, design tokens, CSS variables) MUST be stored in dedicated, standalone configuration files (e.g., `theme.css`, `src/styles/theme/`) to ensure high maintainability and a single source of truth for design.
    - **No Hardcoded Colors:** STRICTLY FORBIDDEN to use fixed colors (e.g., `bg-white`, `text-black`, `#FFFFFF`). Always use **Design Tokens** or **CSS Variables** (e.g., `var(--background)`, `text-primary`, `bg-secondary`) that adapt automatically to both Dark and Light modes.
    - **System Preference:** Default to the user's system theme preference unless a specific theme is selected; a manual toggle must also be provided.
 

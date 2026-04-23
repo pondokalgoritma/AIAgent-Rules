@@ -38,5 +38,6 @@
    - **Non-Draggable Controls:** All interactive elements within the title bar (buttons, menus, inputs) MUST be explicitly excluded from the draggable region (e.g., `no-drag`) to ensure they remain interactive.
    - **Tauri-Specific Configuration:** When using **Tauri**, the AI MUST:
      - Set `"decorations": false` in `tauri.conf.json` to enable frameless mode.
-     - Enable window APIs in the **Allowlist** (e.g., `"window": { "all": true }`) to allow JavaScript to control window states.
+     - Enable specific window APIs in the **Allowlist** (e.g., `"window": { "minimize": true, "maximize": true, "unmaximize": true, "close": true, "startDragging": true }`) to allow JavaScript to control window states.
+
      - Use the `data-tauri-drag-region` attribute on the HTML title bar element for native drag support.

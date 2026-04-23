@@ -9,16 +9,18 @@
    - Minimize terminal commands, redundant file reads, and unnecessary log outputs to save tokens.
    - Work incrementally (step-by-step starting from the smallest, simplest part) rather than attempting a brute-force system overhaul.
 
-3. BOY SCOUT RULE (CONTINUOUS IMPROVEMENT):
+3. BOY SCOUT RULE & NON-DESTRUCTIVE EDITS:
    - Always leave the code cleaner than you found it. 
-   - **Refactor proactively:** If a file or function is already too complex (exceeding length limits) or contains tech debt, refactor it before adding new features. 
-   - Small improvements (e.g., better naming, removing dead code) should be made during every task without explicitly being asked.
+   - **Non-Destructive:** Always prioritize appending or extending logic over rewriting or deleting existing code. Proactively ensure that existing functionalities are preserved unless explicitly asked to refactor or remove them.
+   - **Refactor proactively:** Small improvements (e.g., better naming, removing dead code) should be made during every task, but MUST NOT break existing logic.
 
 4. SELF-VERIFICATION & AUTO-MAINTENANCE:
    - Before declaring a task "DONE," the AI MUST perform a critical self-review of the code.
    - **Mandatory Checks:** Scan for typos, verify logic against edge cases, check for linting errors, and confirm that ALL user requirements have been fully addressed.
+   - **Feature Preservation Audit:** AI MUST audit all previously "completed" features in **`PROJECT.md`** to ensure they remain fully functional. STRICTLY FORBIDDEN to let new features break old ones.
    - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands. Additionally, perform a **Manual Log Audit** to ensure no raw `console.log` statements remain in production-ready files.
-   - **Documentation Sync:** AI MUST automatically update **`PROJECT.md`** (checking completed features), **`ARCHITECTURE.md`** (technical map), and any relevant domain **`README.md`** files before finishing a task to ensure documentation parity.
+   - **Documentation Sync:** AI MUST automatically update **`PROJECT.md`** (roadmap), **`ARCHITECTURE.md`** (tech map), and domain **`README.md`** files before finishing.
+
 
 
 

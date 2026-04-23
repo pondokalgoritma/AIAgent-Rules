@@ -8,7 +8,6 @@
    - **Reusability & Consistency:** Every UI element must be highly reusable, modular, and strictly follow a uniform design language (consistent typography, padding, borders, and shadows) throughout the entire application.
 
 
-
 2. ACCESSIBILITY (A11Y) & UX:
    - Custom modals must support keyboard navigation (e.g., ESC to close, focus traps).
    - Transition animations must be smooth but efficient to avoid rendering performance issues.
@@ -63,5 +62,12 @@
 12. STRICT FORM MANAGEMENT & VALIDATION:
    - **Schema-Based Validation:** MANDATORY use of schema validation libraries (e.g., **Zod**, **Valibot**) for all forms to ensure data integrity.
    - **No Manual Validation:** STRICTLY FORBIDDEN to write ad-hoc, manual validation logic inside components. All rules MUST be defined in centralized, reusable schemas.
+
+13. PREMIUM FINISHING TOUCHES:
+   - **Empty States:** Every data list or search result MUST have a polished "Empty State" UI. STRICTLY FORBIDDEN to leave a blank white screen; use subtle illustrations, icons, and clear call-to-action (CTA) text.
+   - **Interactive Feedback:** Any button or interactive element that triggers an asynchronous action MUST show a clear loading/busy state (e.g., replace icon with spinner, disable with visual feedback) to provide immediate user acknowledgment.
+   - **Custom Scrollbars:** Implement sleek, theme-aware custom scrollbar styling for all scrollable containers to ensure a consistent premium aesthetic across different browsers and operating systems.
+   - **Professional Branding:** Every project MUST include a custom Favicon and full Social Media (OpenGraph/SEO) metadata to ensure a professional appearance when shared.
+
 
 

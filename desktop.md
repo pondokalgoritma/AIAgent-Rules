@@ -25,3 +25,8 @@
    - Even though it is a desktop application, the UI MUST be fully responsive and designed with a "Mobile-First" approach.
    - The application window must gracefully handle resizing down to small, mobile-like dimensions (e.g., side-panel sizes) without breaking the layout or causing horizontal scroll issues.
    - Rely on flexible grids, flexbox, CSS variables, and relative units rather than rigid, fixed pixel dimensions.
+
+6. NATIVE DUAL THEMING:
+   - Desktop applications must support both **Dark** and **Light** themes.
+   - UI components must respond to the system-level theme change automatically.
+   - Ensure high contrast and accessibility standards are met in both themes.

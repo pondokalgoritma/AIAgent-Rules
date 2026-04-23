@@ -23,3 +23,8 @@
    - Mandatory use of **Tailwind CSS** for all UI styling across both Web and Desktop applications.
    - STRICTLY FORBIDDEN to write custom raw CSS files unless dealing with complex, highly specific animations or edge cases that Tailwind cannot handle natively.
    - Utilize Tailwind's built-in responsive utility classes (e.g., `sm:`, `md:`, `lg:`) to easily implement the Mobile-First approach.
+
+6. DUAL THEME SUPPORT (DARK & LIGHT):
+   - Every GUI component and layout must natively support at least two themes: **Dark Mode** and **Light Mode**.
+   - Use CSS variables or Tailwind's `dark:` utility classes to ensure seamless switching between themes.
+   - The default theme should be determined by the user's system preference (`prefers-color-scheme`), but a manual toggle must also be provided.

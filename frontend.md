@@ -77,8 +77,11 @@
    - **Hybrid Dropdowns:** Custom Select/Dropdown components MUST natively support both **Single** and **Multiple** selection modes with a consistent visual style (e.g., using chips/tags for multiple items).
    - **Modern Option Selection:** Favor **Toggle Buttons** (Segmented Controls) for selecting options instead of raw, unstyled radio buttons or checkboxes to maintain a premium UI feel.
 
-15. PREMIUM AESTHETICS (VISUAL EXCELLENCE):
+15. PREMIUM AESTHETICS & ANTI-GENERIC DESIGN:
    - **Design Skills Mandate:** AI MUST utilize the `ui-ux-designer` and `design-md` skills when creating new layouts or complex components to ensure high-end, premium aesthetics.
+   - **Anti-"AI-Look" Colors:** STRICTLY FORBIDDEN to rely exclusively on default Tailwind color palettes (e.g., plain `blue-500`, `gray-800`). AI MUST generate and use a tailored, harmonious color palette (using HSL/OKLCH values) that feels bespoke and brand-specific.
+   - **Typography Excellence:** Do not default to generic system fonts. Mandate the use of modern, premium typography (e.g., *Inter, Plus Jakarta Sans, Outfit, or Space Grotesk*) and utilize font-weight contrast effectively.
+   - **Editorial & Asymmetrical Layouts:** Break out of the repetitive "Generic AI Card Grid" syndrome. Where appropriate, use intentional whitespace, asymmetrical grid placements, and bento-box layouts to create a unique visual hierarchy.
    - **Glassmorphism:** Use `backdrop-filter: blur()` and semi-transparent backgrounds for overlays, floating headers, and modals to create a high-end "frosted glass" effect.
    - **Subtle Layered Shadows:** Use multi-layered box-shadows (diffused shadows) instead of single-layer ones to create a natural, organic sense of depth and elevation.
    - **Organic Animations:** Implement **Spring Physics** (e.g., Framer Motion spring) for transitions and hover effects to make the UI feel alive and responsive.

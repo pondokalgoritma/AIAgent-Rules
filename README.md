@@ -12,7 +12,7 @@ A modular, highly optimized, and enterprise-ready rule system designed to govern
 
 ## 📂 Architecture & Files
 
-The framework is divided into 8 atomic markdown files, orchestrated by a central `index.md`.
+The framework is divided into atomic markdown files, orchestrated by a central `index.md`.
 
 ### 1. The Core
 * **`index.md`** - The entry point. Dictates the load order and defines the agent's operating mode (FAST, SAFE, STRICT).

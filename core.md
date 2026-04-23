@@ -18,3 +18,10 @@
    - Before declaring a task "DONE," the AI MUST perform a critical self-review of the code.
    - **Mandatory Checks:** Scan for typos, verify logic against edge cases, check for linting errors, and confirm that ALL user requirements have been fully addressed.
    - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands to ensure no regressions or syntax errors were introduced during the process.
+
+5. NO PLACEHOLDERS & COMPLETION SUMMARY:
+   - **Fully Functional:** STRICTLY FORBIDDEN to use placeholders, `// TODO` comments, or incomplete logic. Every line of code must be fully functional and integrated.
+   - **Handover Summary:** Upon task completion, the AI MUST provide a concise summary including:
+     - **What Changed:** A clear list of modifications and new files.
+     - **Why:** Brief rationale for the implementation strategy.
+     - **How to Test:** Specific steps for the user to verify the changes work as intended.

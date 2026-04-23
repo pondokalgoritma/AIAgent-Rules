@@ -11,3 +11,10 @@
 3. TEST READABILITY:
    - Use the AAA pattern (Arrange, Act, Assert) or Given-When-Then structure.
    - Test function names must be highly descriptive, explaining the scenario being tested and the expected outcome.
+
+4. TEST-DRIVEN DEVELOPMENT (TDD) WORKFLOW:
+   - **Red-Green-Refactor:** For every new feature or bug fix, follow the TDD cycle:
+     1. **RED:** Write a failing test that defines the expected behavior.
+     2. **GREEN:** Write the minimal code to pass the test.
+     3. **REFACTOR:** Clean up the implementation while keeping the test passing.
+   - **Mandatory Coverage:** 100% unit test coverage is MANDATORY for all Business/Service Layer logic. UI components and Repositories should have coverage for critical interactions only.

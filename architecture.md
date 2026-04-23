@@ -38,3 +38,9 @@
    - **Repository Pattern:** All database operations must be abstracted behind interfaces. Do not leak DB-specific ORM methods or SQL syntax into the Service layer.
    - **Adapter/Gateway Pattern:** Wrap all 3rd-party API integrations inside generic Adapter or Gateway classes. 
    - *Goal:* Swapping a database engine or changing an API provider later should only require creating a new Adapter/Repository file, with ZERO changes required in the Business Logic (Service Layer).
+
+8. API CONTRACT & RESPONSE STANDARDIZATION:
+   - **Uniform Response Format:** All API responses MUST follow a consistent structure to prevent frontend parsing errors.
+   - **Standard Success Format:** `{ "success": true, "data": Object|Array, "message": string }`.
+   - **Standard Error Format:** `{ "success": false, "error": { "code": string, "message": string, "details": any } }`.
+   - **Consistent HTTP Status Codes:** Use appropriate status codes: 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), 500 (Internal Error).

@@ -35,7 +35,7 @@
    - Consistency: Ensure all icons used within the same application follow a uniform stroke weight, style (e.g., all outlined or all filled), and sizing pattern.
 
 8. USER FEEDBACK & LAYERING:
-   - **Loading & Empty States:** Every data-fetching component MUST handle and display a distinct "Loading" state and an "Empty" state (when no data is returned). DILARANG (FORBIDDEN) to show blank screens during background processes.
+   - **Loading & Empty States:** Every data-fetching component MUST handle and display a distinct "Loading" state and an "Empty" state (when no data is returned). STRICTLY FORBIDDEN to show blank screens during background processes.
    - **Z-Index Management:** Avoid "Z-Index Wars" (e.g., `z-[9999]`). Use a structured layering system or Tailwind's standard z-index scale.
 
 9. ADVANCED FRONTEND PATTERNS:

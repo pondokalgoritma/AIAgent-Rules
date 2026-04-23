@@ -38,5 +38,5 @@
 
 9. SILENT FAILURE PREVENTION:
    - **Timezone Consistency:** All timestamps MUST be stored and processed in **UTC (ISO 8601)**. Conversion to local timezones should ONLY happen at the Presentation Layer (UI) for display purposes.
-   - **Streaming for Large Data:** DILARANG (FORBIDDEN) to read entire large files or datasets into memory. Use **Streams** (ReadableStream/WritableStream) for processing to keep memory usage constant and prevent OOM (Out of Memory) crashes.
+   - **Streaming for Large Data:** STRICTLY FORBIDDEN to read entire large files or datasets into memory. Use **Streams** (ReadableStream/WritableStream) for processing to keep memory usage constant and prevent OOM (Out of Memory) crashes.
    - **Rate Limit Handling:** When calling external APIs, implement **Exponential Backoff** and retry mechanisms to gracefully handle `429 Too Many Requests` or transient network errors.

@@ -11,7 +11,7 @@
 
 3. ENVIRONMENT & SECRETS:
    - **Dependency Injection:** Access environment variables and bindings exclusively via the `env` object passed to the handler. NEVER use `process.env`.
-   - **Secret Protection:** DILARANG (FORBIDDEN) to commit raw secrets to `wrangler.jsonc`. Secrets must be managed via Cloudflare Dashboard or `wrangler secret put`.
+   - **Secret Protection:** STRICTLY FORBIDDEN to commit raw secrets to `wrangler.jsonc`. Secrets must be managed via Cloudflare Dashboard or `wrangler secret put`.
 
 4. DATABASE (D1) & PERSISTENCE:
    - **Migration & Reset Policy:**

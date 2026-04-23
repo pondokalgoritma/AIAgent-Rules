@@ -1,5 +1,7 @@
 # AI Agent Rules Framework
 
+**Repository:** [https://github.com/pondokalgoritma/AIAgent-Rules](https://github.com/pondokalgoritma/AIAgent-Rules)
+
 A modular, highly optimized, and enterprise-ready rule system designed to govern AI coding agents (like Claude, GPT, or Gemini). This framework guarantees maximum token efficiency, prevents hallucinations, strictly enforces clean code standards (SOLID, DRY), and ensures cross-platform and localization compliance.
 
 ## 🌟 Core Philosophy

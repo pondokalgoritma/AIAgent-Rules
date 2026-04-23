@@ -14,10 +14,12 @@
    - **Refactor proactively:** If a file or function is already too complex (exceeding length limits) or contains tech debt, refactor it before adding new features. 
    - Small improvements (e.g., better naming, removing dead code) should be made during every task without explicitly being asked.
 
-4. SELF-VERIFICATION (THE FINAL CHECK):
+4. SELF-VERIFICATION & AUTO-MAINTENANCE:
    - Before declaring a task "DONE," the AI MUST perform a critical self-review of the code.
    - **Mandatory Checks:** Scan for typos, verify logic against edge cases, check for linting errors, and confirm that ALL user requirements have been fully addressed.
    - **Build Validation:** Whenever possible, run the project's `lint`, `test`, or `build` commands. Additionally, perform a **Manual Log Audit** to ensure no raw `console.log` statements remain in production-ready files.
+   - **Documentation Sync:** AI MUST automatically update **`PROJECT.md`** (checking completed features), **`ARCHITECTURE.md`** (technical map), and any relevant domain **`README.md`** files before finishing a task to ensure documentation parity.
+
 
 
 5. NO PLACEHOLDERS & COMPLETION SUMMARY:

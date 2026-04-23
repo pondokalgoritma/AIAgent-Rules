@@ -25,3 +25,11 @@
      - **What Changed:** A clear list of modifications and new files.
      - **Why:** Brief rationale for the implementation strategy.
      - **How to Test:** Specific steps for the user to verify the changes work as intended.
+
+6. PROJECT CONTEXT & SPECIFICATION WORKFLOW:
+   - **Mandatory File:** Every project MUST have a standardized **`PROJECT.md`** file in the root directory.
+   - **Initial Setup:** If `PROJECT.md` is missing, the AI MUST proactively ask the user:
+     1. What is the project name and its primary purpose?
+     2. What are the key features desired?
+   - **Specification Creation:** After receiving the information, the AI MUST create `PROJECT.md` with sections for: Project Name, Purpose, Feature List (with checkboxes), and an Implementation Roadmap.
+   - **Execution Alignment:** If `PROJECT.md` exists, the AI MUST read it first to understand current progress and strictly follow the roadmap to prevent hallucinations and maintain context.

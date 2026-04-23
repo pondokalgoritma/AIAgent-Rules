@@ -52,3 +52,9 @@
 10. STANDARDIZED UTILITIES (FORMATTING):
    - **Centralized Logic:** STRICTLY FORBIDDEN to perform raw formatting (Dates, Currency, Numbers) directly in components.
    - **Utility Functions:** Always use centralized utility functions or dedicated libraries (e.g., `date-fns`, `Intl`) to ensure consistency across the entire UI.
+
+
+11. OOP & DOMAIN-DRIVEN DESIGN (DDD) PRINCIPLES:
+   - **Object-Oriented Programming (OOP):** Favor OOP patterns (Classes, Inheritance, Polymorphism, Encapsulation) for complex logic to improve reusability and maintainability.
+   - **Domain-Based Grouping:** Organize the codebase by **Business Domain** (e.g., `src/modules/auth`, `src/modules/billing`, `src/modules/users`) rather than technical type (e.g., all controllers in one folder).
+   - **Reusability:** Design modules and components to be highly reusable and independent. Business logic MUST be decoupled from specific transport layers (API/CLI/Web) or storage engines.

@@ -6,7 +6,9 @@
 
 2. SIDECAR & BINARY DIRECTORIES:
    - All external sidecars, tools, and shared binaries must be centrally stored under a `<vendor_name>` folder (defaulting to `denox`).
-   - **Sidecar Downloads:** All URLs for downloading sidecars, binaries, or external tools MUST be stored in the centralized `endpoints.json` or `endpoints.yaml` file as defined in `reliability.md`. Hardcoding download URLs is STRICTLY FORBIDDEN.
+   - **Sidecar Downloads:** All URLs for downloading sidecars, binaries, or external tools MUST be stored in the centralized `endpoints.json` or `endpoints.yaml` file as defined in `reliability.md`.
+   - **Compile-Time Embedding:** For desktop applications, these configuration files MUST be **embedded into the application binary** during compilation (e.g., using `include_str!` in Rust or framework-specific resource bundling) to ensure the app remains self-contained and tamper-resistant. Hardcoding download URLs directly in the logic is STRICTLY FORBIDDEN.
+
    - **Windows:** `%APPDATA%\<vendor_name>\bin`
    - **Linux:** `~/.local/share/<vendor_name>\bin` (or standard XDG data home)
    - **macOS:** `~/Library/Application Support/<vendor_name>\bin`

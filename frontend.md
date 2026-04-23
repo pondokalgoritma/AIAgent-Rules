@@ -43,3 +43,13 @@
    - **Race Condition Handling:** When performing multiple asynchronous requests for the same state (e.g., search-as-you-type), always use an `AbortController` to cancel previous pending requests and prevent outdated data from overwriting new results.
    - **Debouncing & Throttling:** Rapid-fire events (input, scroll, resize) MUST be debounced or throttled to prevent performance degradation and excessive API calls.
    - **Semantic HTML:** Strictly avoid "Div-Soup." Use appropriate semantic tags (`<nav>`, `<header>`, `<main>`, `<article>`, `<button>`, etc.) to ensure accessibility (A11y) and SEO optimization.
+
+10. ASSET OPTIMIZATION (PERFORMANCE):
+   - **Modern Formats:** Prefer modern, highly-compressed formats for images (e.g., **WebP** or **AVIF**) over legacy formats (PNG/JPG).
+   - **Lazy Loading:** All non-critical images and media MUST use native `loading="lazy"` to preserve bandwidth and improve initial page load speed.
+   - **Sizing:** STRICTLY FORBIDDEN to serve oversized images. Always resize and compress assets to their intended display dimensions.
+
+11. DEPENDENCY ISOLATION (NO EXTERNAL CDNs):
+   - **Local Bundling:** STRICTLY FORBIDDEN to load libraries, scripts, or styles via external CDNs (e.g., `<script src="https://cdn...">`). 
+   - **Self-Hosted:** All dependencies MUST be installed via a Package Manager (npm/yarn/pnpm) and bundled locally to ensure security (XSS prevention), privacy, and offline reliability.
+

@@ -44,3 +44,11 @@
    - **Standard Success Format:** `{ "success": true, "data": Object|Array, "message": string }`.
    - **Standard Error Format:** `{ "success": false, "error": { "code": string, "message": string, "details": any } }`.
    - **Consistent HTTP Status Codes:** Use appropriate status codes: 200 (OK), 201 (Created), 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), 500 (Internal Error).
+
+9. CONSISTENT STATE MANAGEMENT:
+   - **Pattern Uniformity:** Use a single, unified state management pattern across the application (e.g., **Zustand** for global state, **Signals** or **Context** for UI-specific state). STRICTLY FORBIDDEN to mix multiple competing state libraries.
+   - **Single Source of Truth:** Ensure that shared data is never duplicated across multiple states. Use derived states (selectors/computed) to keep data synchronized.
+
+10. STANDARDIZED UTILITIES (FORMATTING):
+   - **Centralized Logic:** STRICTLY FORBIDDEN to perform raw formatting (Dates, Currency, Numbers) directly in components.
+   - **Utility Functions:** Always use centralized utility functions or dedicated libraries (e.g., `date-fns`, `Intl`) to ensure consistency across the entire UI.

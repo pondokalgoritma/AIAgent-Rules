@@ -33,9 +33,28 @@ The framework is divided into atomic markdown files, orchestrated by a central `
 * **`database.md`** - Optimizes database querying, index usage, cardinality, and strict avoidance of N+1 problems.
 * **`cloudflare.md`** - Governs Cloudflare-specific bindings (D1, KV, R2), Edge Runtime constraints, and automated migration systems.
 
-## 🚀 How to Use
-Whenever you assign a task to the AI, instruct it to parse the rules in the exact order defined in `index.md`. 
+## 🚀 Quick Start
+
+### 1. Installation
+Copy all `.md` files from this repository into your project root:
+* **For General Agents (Cline, Roo, etc.):** Put them in a folder named `.ai-rules/` and point your agent to `index.md`.
+* **For Cursor:** Consolidate these rules into your `.cursorrules` file or keep them in the root and instruct Cursor to "Always follow rules in the `.md` files".
+
+### 2. First-Time Project Initiation Prompt
+Copy and paste the following prompt to start a new project with this ruleset:
+
+```text
+I am starting a new project. Read 'index.md' and follow the 'CORE OPERATIONAL RULES' 
+in 'core.md' to initiate the project. 
+
+1. Perform a Pre-flight Check.
+2. Ask me for the required Project Metadata (Name, Purpose, Domain, URL).
+3. Initialize the mandatory project files (README.md, PROJECT.md, ARCHITECTURE.md, .gitignore).
+```
+
+## 🛠️ Modular Loading
 The AI will selectively load the modular rules based on the context of the task (e.g., loading `frontend.md` only for UI tasks, saving immense token costs).
 
 ---
 *Built to ensure AI writes code that human engineers actually enjoy maintaining.*
+

@@ -37,3 +37,9 @@
    - **Search-First Policy:** In large codebases, the AI MUST use `grep` or `find` to locate specific logic instead of reading directories recursively to preserve context window and efficiency.
    - **Navigation Map:** AI MUST update `ARCHITECTURE.md` whenever new domains or major architectural changes occur to ensure a clear "X-Ray" view of the project structure.
    - **Execution Alignment:** AI MUST read these files first to understand the project's technical map and functional progress before writing any code.
+
+7. ANTI-HALLUCINATION & SANITY RULES:
+   - **Verification First:** AI MUST verify the existence of any local file, function, or library before importing it. 
+   - **No Ghost Imports:** STRICTLY FORBIDDEN to use "imaginary" imports or libraries that are not in the codebase or `package.json`.
+   - **Apology-Loop Breach:** If a task fails twice using the same approach, AI MUST NOT repeat the same strategy. It MUST pause and ask the User for guidance or propose a radically different solution.
+   - **No Zombie Files:** When a file is referenced in code, it MUST be fully implemented and functional immediately. References to empty or "TODO" files are strictly prohibited.

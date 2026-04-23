@@ -35,3 +35,8 @@
 8. STABILITY & INTEGRITY:
    - **Idempotency & Double Submit:** For state-changing operations (Create/Update/Delete), implement UI protections (e.g., disabling buttons after the first click) and backend checks to prevent duplicate actions from multiple submissions.
    - **Environment Validation:** Critically important environment variables (defined in `.env` or bindings) MUST be validated during application startup. The app should fail fast and log clear errors if a required secret or configuration is missing.
+
+9. SILENT FAILURE PREVENTION:
+   - **Timezone Consistency:** All timestamps MUST be stored and processed in **UTC (ISO 8601)**. Conversion to local timezones should ONLY happen at the Presentation Layer (UI) for display purposes.
+   - **Streaming for Large Data:** DILARANG (FORBIDDEN) to read entire large files or datasets into memory. Use **Streams** (ReadableStream/WritableStream) for processing to keep memory usage constant and prevent OOM (Out of Memory) crashes.
+   - **Rate Limit Handling:** When calling external APIs, implement **Exponential Backoff** and retry mechanisms to gracefully handle `429 Too Many Requests` or transient network errors.

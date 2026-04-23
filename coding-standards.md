@@ -29,6 +29,8 @@
    - **Immutability First:** Avoid mutating objects or arrays directly. Always prefer returning new copies (e.g., using spread operators `{...obj}` or map/filter) to ensure predictable state management.
    - **No Magic Numbers/Strings:** STRICTLY FORBIDDEN to use raw, unexplained numbers or strings in logic (e.g., `if (status === 3)`). Use descriptive constants or enums (e.g., `if (status === Status.PUBLISHED)`).
    - **Financial Accuracy:** NEVER use floating-point numbers for currency or financial calculations. Use **Integers (Cents)**, `BigInt`, or specialized decimal libraries to prevent precision loss.
+   - **Cross-Platform Path Safety:** STRICTLY FORBIDDEN to use hardcoded path separators (e.g., `/` or `\`). Always use platform-agnostic utilities (e.g., `path.join()` in Node.js) to ensure seamless compatibility across Linux, Windows, and macOS.
+
 
 8. DEPENDENCY MANAGEMENT & VERSION PINNING:
    - **Solid & Latest:** Always use the latest STABLE version of a library. Avoid beta/release candidates unless specifically requested.

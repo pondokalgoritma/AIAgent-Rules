@@ -37,7 +37,7 @@
 
 8. USER FEEDBACK & LAYERING:
    - **Loading & Empty States:** Every data-fetching component MUST handle and display a distinct "Loading" state and an "Empty" state (when no data is returned). STRICTLY FORBIDDEN to show blank screens during background processes.
-   - **Z-Index Management:** Avoid "Z-Index Wars" (e.g., `z-[9999]`). Use a structured layering system or Tailwind's standard z-index scale.
+   - **Z-Index Layering System:** Avoid arbitrary or extreme values (e.g., `z-[9999]`). Use a structured, tiered scale (e.g., Modals: `z-50`, Overlays: `z-40`, Navigation: `z-30`, Dropdowns: `z-20`) to maintain a predictable visual order.
 
 9. ADVANCED FRONTEND PATTERNS:
    - **Race Condition Handling:** When performing multiple asynchronous requests for the same state (e.g., search-as-you-type), always use an `AbortController` to cancel previous pending requests and prevent outdated data from overwriting new results.

@@ -28,3 +28,8 @@
    - Every GUI component and layout must natively support at least two themes: **Dark Mode** and **Light Mode**.
    - Use CSS variables or Tailwind's `dark:` utility classes to ensure seamless switching between themes.
    - The default theme should be determined by the user's system preference (`prefers-color-scheme`), but a manual toggle must also be provided.
+
+7. PROFESSIONAL ASSETS & ICONS:
+   - MANDATORY use of professional, high-quality icon libraries (e.g., **Lucide React**, **Heroicons**, or **Radix Icons**).
+   - STRICTLY FORBIDDEN to use low-quality raster images (PNG/JPG) for UI icons; icons MUST be SVG-based for infinite scalability and crispness.
+   - Consistency: Ensure all icons used within the same application follow a uniform stroke weight, style (e.g., all outlined or all filled), and sizing pattern.
